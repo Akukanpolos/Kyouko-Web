@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyouko-MD</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .background {
+            background-image: url('https://files.catbox.moe/os1j9q.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+        }
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .content {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: center;
+        }
+        .content.active {
+            display: block;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .shop-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .shop-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        /* Warna Utama */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #f1c40f;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+}
+
+/* Font Utama */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background Utama */
+.background {
+  background-image: url('https://files.catbox.moe/os1j9q.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Menu Utama */
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Konten Utama */
+.content {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.content.active {
+  display: block;
+}
+
+/* Profil Utama */
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Tombol Utama */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+/* Item Shop */
+.shop-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shop-item img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.shop-item h2 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.shop-item p {
+  margin-bottom: 10px;
+}
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  color: #FFFFFF;
+  opacity: 100;
+  z-index: 1000;
+}
+.watermark::before {
+  content: "Created By F Naga";
+}
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="menu">
+            <a href="#" onclick="showContent('lobby')">Lobby</a>
+            <a href="#" onclick="showContent('shop')">Shop</a>
+            <a href="#" onclick="showContent('donate')">Donate</a>
+            <a href="#" onclick="showContent('creator')">Creator</a>
+        </div>
+
+        <div id="lobby" class="content active">
+            <h1>Kyouko-MD</h1>
+            <img src="https://files.catbox.moe/qdl8rw.jpg" alt="Profile" class="profile-img">
+            <br>
+            <a href="https://Wa.me/628978116653?text=Hallo+aku+mau+sewa+bot+KyoukoMD" class="button">Sewa Bot</a>
+            <br>
+            <a href="https://chat.whatsapp.com/Lb5H0XIoSguJTKG697avPi" class="button">Group Bot Whatsapp</a>
+            <br>
+            <a href="https://whatsapp.com/channel/0029VazkLU860eBk2a6xDL10" class="button">Saluran Bot Whatsapp</a>
+        </div>
+
+        <div id="shop" class="content">
+            <h1>Kyouko-MD Shop</h1>
+            <div class="shop-item">
+                <img src="https://files.catbox.moe/s5j8wf.jpg" alt="Paket Hemat">
+                <div>
+                    <h2>Paket Hemat | 15k</h2>
+                    <p>Sewa Bot 1 Bulan<br>Premium Bot 1 Bulan</p>
+                </div>
+            </div>
+            <div class="shop-item">
+                <img src="https://files.catbox.moe/db9zly.jpg" alt="Paket Murah">
+                <div>
+                    <h2>Paket Murah | 30k</h2>
+                    <p>Sewa Bot 6 Bulan<br>Premium Bot 6 Bulan</p>
+                </div>
+            </div>
+            <div class="shop-item">
+                <img src="https://files.catbox.moe/rom6x1.jpg" alt="Paket Sultan">
+                <div>
+                    <h2>Paket Sultan | 50k</h2>
+                    <p>Sewa 2 Group 1th<br>Premium 1th</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="donate" class="content">
+            <h1>Donasi</h1>
+            <img src="https://files.catbox.moe/qdl8rw.jpg" alt="Profile" class="profile-img">
+            <p>Dana: 08978116653<br>Ovo: -<br>Gopay: -</p>
+        </div>
+
+        <div id="creator" class="content">
+            <h1>Creator</h1>
+            <img src="https://files.catbox.moe/qdl8rw.jpg" alt="Profile" class="profile-img">
+            <p>Nama: F Dragon<br>Nomor: <a href="https://wa.me/628978116653">wa.me/628978116653</a></p>
+        </div>
+        
+        <div class="watermark"></div>
+    </div>
+
+    <script>
+        function showContent(id) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
